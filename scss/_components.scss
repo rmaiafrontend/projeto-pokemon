@@ -204,10 +204,138 @@
   background-color: #fff;
   border-radius: 1.2rem;
   transition: all 0.3s;
+  z-index: 1;
   &:hover {
     transform: scale(1.02);
     box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
   }
+  &.grass {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.2);
+      }
+    }
+  }
+  &.bug {
+    .image {
+      &:after {
+        background-color: rgba(156, 186, 72, 0.2);
+      }
+    }
+  }
+  &.dark {
+    .image {
+      &:after {
+        background-color: rgba(89, 87, 97, 0.2);
+      }
+    }
+  }
+  &.dragon {
+    .image {
+      &:after {
+        background-color: rgba(44, 106, 193, 0.2);
+      }
+    }
+  }
+  &.electric {
+    .image {
+      &:after {
+        background-color: rgba(238, 218, 103, 0.2);
+      }
+    }
+  }
+  &.fairy {
+    .image {
+      &:after {
+        background-color: rgba(226, 150, 225, 0.2);
+      }
+    }
+  }
+  &.fighting {
+    .image {
+      &:after {
+        background-color: rgba(196, 77, 97, 0.2);
+      }
+    }
+  }
+  &.ground {
+    .image {
+      &:after {
+        background-color: rgba(206, 128, 86, 0.2);
+      }
+    }
+  }
+  &.ice {
+    .image {
+      &:after {
+        background-color: rgba(139, 206, 193, 0.2);
+      }
+    }
+  }
+  &.normal {
+    .image {
+      &:after {
+        background-color: rgba(160, 162, 159, 0.2);
+      }
+    }
+  }
+  &.poison {
+    .image {
+      &:after {
+        background-color: rgba(172, 106, 202, 0.2);
+      }
+    }
+  }
+  &.psychic {
+    .image {
+      &:after {
+        background-color: rgba(235, 140, 133, 0.2);
+      }
+    }
+  }
+  &.rock {
+    .image {
+      &:after {
+        background-color: rgba(139, 206, 193, 0.2);
+      }
+    }
+  }
+  &.ghost {
+    .image {
+      &:after {
+        background-color: rgba(97, 110, 183, 0.2);
+      }
+    }
+  }
+  &.steel {
+    .image {
+      &:after {
+        background-color: rgba(101, 148, 161, 0.2);
+      }
+    }
+  }
+  &.water {
+    .image {
+      &:after {
+        background-color: rgba(136, 163, 212, 0.2);
+      }
+    }
+  }
+  &.fire {
+    .image {
+      &:after {
+        background-color: rgba(246, 109, 109, 0.2);
+      }
+    }
+  }
+  &.flying {
+    .image {
+      &:after {
+        background-color: rgba(166, 187, 232, 0.2);
+      }
+    }
+  }
+
   .image {
     position: absolute;
     width: 16.5rem;
@@ -215,8 +343,15 @@
     top: 4.3rem;
     right: 6.9rem;
     @include centerTotalFlex;
-    background-color: #d6ebdc;
     border-radius: 10rem;
+    &:after {
+      content: "";
+      width: 16.5rem;
+      height: 16.5rem;
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+    }
   }
   .info {
     position: absolute;
@@ -243,15 +378,100 @@
   }
 }
 
-.load-more {
-  width: 19.6rem;
-  height: 4.6rem;
+.btn-load-more {
+  padding: 1.4rem 2rem;
   background-color: rgba(63, 94, 179, 0.103);
-  span {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: -0.01em;
-    color: #3f5db3;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: var(--blue-primary);
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--blue-primary);
+    color: #ffffff;
+  }
+}
+
+.tag-type {
+  display: inline-block;
+  padding: 0 2.5rem;
+  line-height: 2.4rem;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  &.bug {
+    color: var(--type-bug);
+    background-color: rgba(156, 186, 72, 0.1);
+  }
+  &.dark {
+    color: var(--type-dark);
+    background-color: rgba(89, 87, 97, 0.1);
+  }
+  &.dragon {
+    color: var(--type-dragon);
+    background-color: rgba(44, 106, 193, 0.1);
+  }
+  &.electric {
+    color: var(--type-electric);
+    background-color: rgba(212, 188, 52, 0.1);
+  }
+  &.fairy {
+    color: var(--type-fairy);
+    background-color: rgba(226, 150, 225, 0.1);
+  }
+  &.fighting {
+    color: var(--type-fighting);
+    background-color: rgba(196, 77, 97, 0.1);
+  }
+  &.ground {
+    color: var(--type-ground);
+    background-color: rgba(206, 128, 86, 0.1);
+  }
+  &.ice {
+    color: var(--type-ice);
+    background-color: rgba(113, 186, 171, 0.1);
+  }
+  &.normal {
+    color: var(--type-normal);
+    background-color: rgba(144, 144, 144, 0.1);
+  }
+  &.poison {
+    color: var(--type-poison);
+    background-color: rgba(172, 106, 202, 0.1);
+  }
+  &.psychic {
+    color: var(--type-psychic);
+    background-color: rgba(235, 140, 133, 0.1);
+  }
+  &.rock {
+    color: var(--type-rock);
+    background-color: rgba(132, 190, 179, 0.1);
+  }
+  &.ghost {
+    color: var(--type-ghost);
+    background-color: rgba(97, 110, 183, 0.1);
+  }
+  &.grass {
+    color: var(--type-grass);
+    background-color: rgba(114, 184, 97, 0.1);
+  }
+  &.steel {
+    color: var(--type-steel);
+    background-color: rgba(101, 148, 161, 0.1);
+  }
+  &.water {
+    color: var(--type-water);
+    background-color: rgba(79, 120, 190, 0.1);
+  }
+  &.fire {
+    color: var(--type-fire);
+    background-color: rgba(233, 99, 3, 0.1);
+  }
+  &.flying {
+    color: var(--type-flying);
+    background-color: rgba(117, 140, 189, 0.1);
   }
 }
