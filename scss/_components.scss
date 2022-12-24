@@ -475,3 +475,360 @@
     background-color: rgba(117, 140, 189, 0.1);
   }
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  @include centerTotalFlex;
+  z-index: 2022;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+  &[type-pokemon-modal="fire"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/fire.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="water"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/water.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="grass"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/grass.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="poison"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/poison.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="bug"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/bug.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="dark"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/dark.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="dragon"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/dragon.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="electric"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/electric.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="fairy"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/fairy.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="fighting"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/fighting.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="ground"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/ground.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="ice"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/ice.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="normal"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/normal.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="psychic"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/psychic.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="rock"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/rock.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="ghost"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/ghost.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="steel"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/steel.svg");
+      }
+    }
+  }
+  &[type-pokemon-modal="flying"] {
+    .box {
+      .left-container {
+        background-image: url("../img/bg-types/flying.svg");
+      }
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .box {
+    position: relative;
+    width: 100%;
+    max-width: 71rem;
+    height: 50.8rem;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
+    border-radius: 1.6rem;
+    display: flex;
+    transform: translateY(40px);
+    transition: transform 0.3s ease-in;
+    .close {
+      position: absolute;
+      padding: 0.9rem;
+      top: -43px;
+      right: 0;
+      @include centerTotalFlex;
+      background: #ffffff;
+      border-radius: 8px;
+    }
+    .left-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 19.1rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      .icon {
+        position: absolute;
+        width: 3.4rem;
+        height: 3.4rem;
+        top: 2rem;
+        right: 2rem;
+        @include centerTotalFlex;
+        background: #ffffff;
+        border-radius: 50%;
+      }
+      .image {
+        position: absolute;
+        @include centerTotalFlex;
+        right: -2.6rem;
+        bottom: 13.8rem;
+        width: 20.2rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .right-container {
+      padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+      .name {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        h2 {
+          font-family: "Montserrat";
+          font-size: 2.8rem;
+          line-height: 3.4rem;
+          letter-spacing: -0.01em;
+          color: #2f3133;
+        }
+        span {
+          margin-left: 0.8rem;
+          padding-bottom: 0.4rem;
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2rem;
+          letter-spacing: -0.01em;
+          color: #7a7d80;
+        }
+      }
+      .type {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 3.2rem;
+        li {
+          &:not(:first-child) {
+            margin-left: 1rem;
+          }
+        }
+      }
+      .info {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 3.2rem;
+        li {
+          &:not(:first-child) {
+            margin-left: 4.8rem;
+          }
+          span {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            color: #7a7d80;
+          }
+          strong {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+            color: #2f3133;
+          }
+        }
+      }
+      .weak {
+        margin-bottom: 3.2rem;
+        h4 {
+          font-family: "Inter";
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          letter-spacing: -0.01em;
+          color: #4d5053;
+          margin-bottom: 1.6rem;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          flex-wrap: wrap;
+          li {
+            &:not(:first-child) {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+      .stats {
+        h5 {
+          font-family: "Inter";
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          letter-spacing: -0.01em;
+          color: #4d5053;
+          margin-bottom: 1.6rem;
+        }
+        .all {
+          .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-child) {
+              margin-bottom: 1.3rem;
+            }
+            span {
+              display: block;
+              width: 6.8rem;
+              font-family: "Inter";
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.5rem;
+              color: #7a7d80;
+            }
+            .bar-status {
+              position: relative;
+              width: 100%;
+              max-width: 28.3rem;
+              height: 0.3rem;
+              background-color: #eff3f6;
+              .bar {
+                position: absolute;
+                width: 56%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                background-color: #c20001;
+              }
+              .separator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                li {
+                  width: 0.4rem;
+                  height: 0.3rem;
+                  background-color: #fff;
+                  &:not(:first-child) {
+                    margin-left: 5.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.open-modal {
+  .modal {
+    opacity: 1;
+    pointer-events: all;
+    .box {
+      transform: translateY(0);
+    }
+  }
+}
