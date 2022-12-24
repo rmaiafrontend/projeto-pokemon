@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 121.8rem;
+  margin: 0 auto;
+  .left {
+    h3 {
+      color: #fff;
+    }
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 180%;
+      color: rgba(255, 255, 255, 0.808);
+    }
+  }
+}

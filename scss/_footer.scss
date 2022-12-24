@@ -1,0 +1,11 @@
+footer {
+  width: 100%;
+  background-color: #3f5db3;
+  padding-top: 6.7rem;
+  padding-bottom: 6.7rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

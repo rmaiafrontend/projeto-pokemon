@@ -1,0 +1,257 @@
+.tag {
+  display: flex;
+  align-items: center;
+  max-width: 12.1rem;
+  height: 3.4rem;
+  background-color: #fff;
+  border-radius: 2.4rem;
+  padding: 6px 4px;
+  &:hover {
+    .icon {
+      background-color: rgba(63, 104, 186, 0.151);
+    }
+    span {
+      color: #3f67ba;
+    }
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 24.4rem;
+    background-color: rgba(194, 0, 0, 0.158);
+  }
+  span {
+    margin: 0.8rem;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    color: #c20001;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 40.3rem;
+  height: 5.6rem;
+  border-radius: 12.2rem;
+  border: 1px solid transparent;
+  background-color: #fff;
+  padding-left: 2.5rem;
+  padding-right: 0.7rem;
+  transition: border-color 0.5s;
+  &:hover {
+    border-color: #3e75c3;
+  }
+  input[type="text"] {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #a0afba;
+    &::placeholder {
+      color: #a0afba;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 12.2rem;
+    border: 1px solid transparent;
+    background-color: #e1e9ef;
+    transition: border-color 0.5s;
+    &:hover {
+      border-color: #3e75c3;
+    }
+  }
+}
+
+.type-filter {
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    @include centerTotalFlex;
+    margin-right: 0.5rem;
+  }
+
+  span {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 150%;
+    color: #acb9c1;
+  }
+
+  &.all {
+    span {
+      color: var(--blue-primary);
+    }
+  }
+  &.ghost {
+    span {
+      color: var(--type-ghost);
+    }
+  }
+  &.bug {
+    span {
+      color: var(--type-bug);
+    }
+  }
+  &.dark {
+    span {
+      color: var(--type-dark);
+    }
+  }
+  &.dragon {
+    span {
+      color: var(--type-dragon);
+    }
+  }
+  &.electric {
+    span {
+      color: #eed967;
+    }
+  }
+  &.fairy {
+    span {
+      color: var(--type-fairy);
+    }
+  }
+  &.fighting {
+    span {
+      color: var(--type-fighting);
+    }
+  }
+  &.ground {
+    span {
+      color: var(--type-ground);
+    }
+  }
+  &.ice {
+    span {
+      color: var(--type-ice);
+    }
+  }
+  &.normal {
+    span {
+      color: var(--type-normal);
+    }
+  }
+  &.poison {
+    span {
+      color: var(--type-poison);
+    }
+  }
+  &.psychic {
+    span {
+      color: var(--type-psychic);
+    }
+  }
+  &.rock {
+    span {
+      color: var(--type-rock);
+    }
+  }
+  &.grass {
+    span {
+      color: var(--type-grass);
+    }
+  }
+  &.steel {
+    span {
+      color: var(--type-steel);
+    }
+  }
+  &.water {
+    span {
+      color: var(--type-water);
+    }
+  }
+  &.fire {
+    span {
+      color: var(--type-fire);
+    }
+  }
+  &.flying {
+    span {
+      color: var(--type-flying);
+    }
+  }
+}
+
+.card-pokemon {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  height: 30.4rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
+  }
+  .image {
+    position: absolute;
+    width: 16.5rem;
+    height: 16.5rem;
+    top: 4.3rem;
+    right: 6.9rem;
+    @include centerTotalFlex;
+    background-color: #d6ebdc;
+    border-radius: 10rem;
+  }
+  .info {
+    position: absolute;
+    width: 22.3rem;
+    height: 5.3rem;
+    bottom: 2.4rem;
+    right: 2.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .right {
+      span {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 150%;
+        color: #7a7d80;
+      }
+    }
+    .left {
+      width: 2.8rem;
+      height: 2.8rem;
+      @include centerTotalFlex;
+    }
+  }
+}
+
+.load-more {
+  width: 19.6rem;
+  height: 4.6rem;
+  background-color: rgba(63, 94, 179, 0.103);
+  span {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    color: #3f5db3;
+  }
+}
