@@ -1,3 +1,169 @@
-body {
-  background-color: #ffffff;
+.s-area-slide-hero {
+  position: relative;
+  width: 100%;
+  height: 99.4rem;
+  margin-top: -11.4rem;
+  .slide-hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .swiper-slide {
+      &.blue {
+        .main-area {
+          background: url(../img/bg-blue.svg) no-repeat center center;
+          background-size: cover;
+          .text {
+            .image {
+              .pokeball {
+                position: relative;
+                top: -6.5rem;
+                left: 1.3rem;
+              }
+            }
+          }
+          .area-explore {
+            .txt {
+              .icon {
+                background: rgba(175, 192, 227, 0.308);
+              }
+            }
+          }
+        }
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 28.8rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #eff3f6;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .main-area {
+        background: url(../img/bg-red.svg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 70.6rem;
+        position: relative;
+        z-index: 1;
+        padding-top: 13.3rem;
+        .container {
+          position: relative;
+          height: 100%;
+        }
+        .text {
+          .tag {
+            margin: 0 auto;
+          }
+          h1 {
+            text-align: center;
+            margin-bottom: 0.8rem;
+            margin-top: 2.9rem;
+          }
+          p {
+            font-size: 1.8rem;
+            line-height: 150%;
+            text-align: center;
+            color: #ffffff;
+          }
+          .image {
+            position: relative;
+            width: 100%;
+            max-width: 79.8rem;
+            margin: 0 auto;
+            margin-top: 17.2rem;
+            .lights {
+              position: absolute;
+              left: 50%;
+              margin-left: -8.5rem;
+              top: -4.9rem;
+            }
+          }
+        }
+        .area-explore {
+          position: absolute;
+          bottom: 8rem;
+          left: 0;
+          width: 100%;
+          z-index: 10;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          .txt {
+            position: relative;
+            top: -3.9rem;
+            left: -3.7rem;
+            display: flex;
+            align-items: center;
+            transform: rotate(-90deg);
+            .icon {
+              width: 4rem;
+              height: 4rem;
+              background: #c90c0c;
+              border-radius: 50%;
+              transform: rotate(90deg);
+              @include centerTotalFlex;
+            }
+            span {
+              font-weight: 500;
+              font-size: 1.3rem;
+              color: #ffffff;
+              margin-left: 3rem;
+            }
+          }
+          .swiper-pagination {
+            position: relative;
+            .swiper-pagination-bullet {
+              width: 7px;
+              height: 7px;
+              background-color: #ffffff;
+              transition: 0.5s;
+              &:not(:first-child) {
+                margin-left: 0.6rem;
+                margin-right: 0.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.s-all-info-pokemons {
+  position: relative;
+  padding-top: 11.9rem;
+  margin-top: -28.8rem;
+  z-index: 20;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10.9rem;
+    h2 {
+      width: 100%;
+      max-width: 26.5rem;
+    }
+    .search {
+      margin-top: 2.2rem;
+    }
+  }
+  .area-all {
+    display: flex;
+    .left-container {
+      width: 100%;
+      max-width: 23.9rem;
+      border-right: 1px solid #eff3f6;
+      padding-top: 7.1rem;
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+  }
 }

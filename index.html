@@ -16,57 +16,316 @@
   </head>
 
   <body>
-    <div class="tag">
-      <div class="icon">
-        <img src="./img/bag-red.svg" alt="" />
-      </div>
-      <span>pokedex</span>
-    </div>
-
-    <div class="search">
-      <input type="text" placeholder="Search name or code" />
-      <button>
-        <img src="./img/icon-search.svg" alt="" />
-      </button>
-    </div>
-
-    <button class="type-filter ghost">
-      <div class="icon">
-        <img src="./img/icon-types/ghost.svg" alt="" />
-      </div>
-      <span>Ghost</span>
-    </button>
-
-    <button href="" class="card-pokemon js-open-details-pokemon grass">
-      <div class="image">
-        <img src="./img/bulbasaur.svg" alt="" />
-      </div>
-      <div class="info">
-        <div class="right">
-          <span>#001</span>
-          <h3>Bulbassauro</h3>
-        </div>
-        <div class="left">
-          <img src="./img/icon-planta.svg" alt="" />
-        </div>
-      </div>
-    </button>
-
-    <button class="btn-load-more">Load more Pokémons</button>
-
-    <span class="tag-type bug">Bug</span>
-
-    <footer>
+    <header>
       <div class="container">
-        <div class="left">
-          <h3>Módulo JavaScript</h3>
-          <span>Consumindo e exibindo dados de uma API</span>
+        <div class="logo">
+          <img src="./img/logo.svg" alt="" />
         </div>
-        <div class="right">
-          <img src="./img/codeboost.svg" alt="" />
+        <div class="left-content">
+          <span>Case Study -> Code<b>Boost</b></span>
         </div>
       </div>
-    </footer>
+    </header>
+
+    <div class="s-area-slide-hero">
+      <div class="slide-hero">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="main-area">
+              <div class="container">
+                <div class="text">
+                  <div class="tag">
+                    <div class="icon">
+                      <img src="./img/bag-red.svg" alt="" />
+                    </div>
+                    <span>pokedex</span>
+                  </div>
+                  <h1>Who is that Pokémon?</h1>
+                  <p>
+                    The perfect guide for those who want to hunt Pokémons around
+                    the world
+                  </p>
+                  <div class="image">
+                    <img
+                      src="./img/lighting.svg"
+                      class="lights"
+                      alt="luzes"
+                      title="luzes"
+                    />
+                    <img src="./img/pokeball-red.png" alt="" class="pokeball" />
+                  </div>
+                </div>
+                <div class="area-explore">
+                  <div class="txt">
+                    <div class="icon">
+                      <img src="./img/arrow-down-white.svg" alt="" />
+                    </div>
+                    <span>explore</span>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide blue">
+            <div class="main-area">
+              <div class="container">
+                <div class="text">
+                  <div class="tag blue">
+                    <div class="icon">
+                      <img src="./img/bag-red.svg" alt="" />
+                    </div>
+                    <span>pokedex</span>
+                  </div>
+                  <h1>Catch them all!</h1>
+                  <p>
+                    The perfect guide for those who want to hunt Pokémons around
+                    the world
+                  </p>
+                  <div class="image">
+                    <img
+                      src="./img/lighting.svg"
+                      class="lights"
+                      alt="luzes"
+                      title="luzes"
+                    />
+                    <img
+                      src="./img/pokeball-blue.png"
+                      class="pokeball"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="area-explore">
+                  <div class="txt">
+                    <div class="icon">
+                      <img src="./img/arrow-down-white.svg" alt="" />
+                    </div>
+                    <span>explore</span>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="s-all-info-pokemons">
+      <div class="container">
+        <div class="top">
+          <h2>Select your Pokémon</h2>
+          <div class="search">
+            <input type="text" placeholder="Search name or code" />
+            <button>
+              <img src="./img/icon-search.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="area-all">
+          <div class="left-container">
+            <ul>
+              <li>
+                <button class="type-filter all active">
+                  <div class="icon">
+                    <img src="./img/icon-all.svg" alt="" />
+                  </div>
+                  <span>All</span>
+                </button>
+              </li>
+              <li>
+                <button class="type-filter ghost">
+                  <div class="icon">
+                    <img src="./img/icon-types/ghost.svg" alt="" />
+                  </div>
+                  <span>Ghost</span>
+                </button>
+              </li>
+              <li>
+                <button class="type-filter stone">
+                  <div class="icon">
+                    <img src="./img/stone.svg" alt="" />
+                  </div>
+                  <span>Stone</span>
+                </button>
+              </li>
+              <li>
+                <button class="type-filter plants">
+                  <div class="icon">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                  <span>Plants</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="right-container">
+            <div class="top-container">
+              <div>
+                <img src="./img/icon-pokeball.svg" alt="" />
+                <span
+                  ><strong id="js-count-pokemons">150</strong> Pokémons</span
+                >
+              </div>
+            </div>
+            <div class="all">
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div></button
+              ><button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div></button
+              ><button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div></button
+              ><button
+                href=""
+                class="card-pokemon js-open-details-pokemon grass"
+              >
+                <div class="image">
+                  <img src="./img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="right">
+                    <span>#001</span>
+                    <h3>Bulbassauro</h3>
+                  </div>
+                  <div class="left">
+                    <img src="./img/icon-planta.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+            </div>
+            <button class="btn-load-more">Load more Pokémons</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="modal" type-pokemon-modal="grass">
       <div class="overlay"></div>

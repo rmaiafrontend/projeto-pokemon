@@ -1,3 +1,12 @@
+// Scripts do slide principal
+var slide_hero = new Swiper(".slide-hero", {
+  effect: "fade",
+  pagination: {
+    el: ".slide-hero .main-area .area-explore .swiper-pagination",
+    dynamicBullets: true,
+  },
+});
+
 const cardPokemon = document.querySelectorAll(".js-open-details-pokemon");
 const btnClose = document.querySelector(".js-close-modal");
 
