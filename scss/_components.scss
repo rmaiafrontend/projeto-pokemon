@@ -340,12 +340,12 @@
   }
 
   .image {
-    position: absolute;
-    width: 16.5rem;
-    height: 16.5rem;
-    top: 4.3rem;
-    right: 6.9rem;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
     @include centerTotalFlex;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
     border-radius: 10rem;
     &:after {
       content: "";
@@ -357,27 +357,30 @@
     }
   }
   .info {
-    position: absolute;
-    width: 22.3rem;
-    height: 5.3rem;
-    bottom: 2.4rem;
-    right: 2.9rem;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+    padding: 0 2.8rem;
     .right {
       span {
+        display: block;
+        text-align: left;
         font-weight: 500;
-        font-size: 13px;
+        font-size: 1.3rem;
         line-height: 150%;
         color: #7a7d80;
+        margin-bottom: 0.6rem;
       }
     }
     .left {
+      @include centerTotalFlex;
       width: 2.8rem;
       height: 2.8rem;
-      @include centerTotalFlex;
+      margin-bottom: 0.5rem;
     }
+  }
+  @media (max-width: 1200px) {
+    max-width: 100%;
   }
 }
 
